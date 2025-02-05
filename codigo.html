@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Valentín</title>
+  <style>
+    body {
+      background-color: #f3e0c0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .flower {
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    .flower img {
+      width: 150px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .btn {
+      background-color: #f8d4d4;
+      border: 2px solid #d8a4a4;
+      color: #333;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #e1baba;
+    }
+
+    .btn img {
+      width: 20px;
+      vertical-align: middle;
+    }
+
+    .emoji {
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gif">
+    <img src="gif.gif" alt="gif">
+  </div>
+
+  <h1>¿Quieres ser mi San Valentín? <span class="emoji">❤️</span></h1>
+
+  <a class="btn" href="carta.html">
+    Carta <img src="carta.png" alt="Ícono de carta">
+  </a>
+
+  <button class="btn" onclick="downloadFile('video.mp4', 'Video_San_Valentin.mp4')">
+    Descargar Video 🎥
+  </button>
+
+  <a class="btn" href="cupones.html">
+    Cupones 🎁
+  </a>
+
+  <script>
+    function downloadFile(filePath, fileName) {
+      const link = document.createElement('a');
+      link.href = filePath;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+
+</body>
+</html>
+
+
