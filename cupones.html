@@ -10,46 +10,60 @@
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .coupon {
             background-color: #fff;
             border: 2px dashed #d8a4a4;
             padding: 20px;
-            margin: 20px auto;
-            width: 80%;
+            margin: 15px 10px;
+            width: 90%;
             max-width: 400px;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            color: #d87a7a;
+            margin-bottom: 15px;
         }
 
         h2 {
             color: #d87a7a;
-            font-size: 1.8em;
+            font-size: 1.5em;
+            text-align: center;
         }
 
         ul {
-            text-align: left;
-            margin: 10px 0 20px 0;
             padding-left: 20px;
         }
 
         li {
             margin-bottom: 8px;
             color: #333;
+            font-size: 1em;
         }
 
         .btn {
             background-color: #f8d4d4;
             border: 2px solid #d8a4a4;
             color: #333;
-            padding: 10px 20px;
+            padding: 12px;
             font-size: 1em;
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
         }
 
         .btn:hover {
@@ -67,20 +81,20 @@
             <li>Ver el atardecer en la playa</li>
             <li>Pintar cuadritos viendo el atardecer</li>
             <li>Comer piqueos y alguna bebida</li>
-            <li>Noche de Jacuzzi para terminar una dia bonito</li>
-            <li>Válido a partir de las 5pm </li>
+            <li>Noche de Jacuzzi para terminar un día bonito</li>
+            <li>Válido a partir de las 5pm</li>
         </ul>
-        <button class="btn" onclick="enviarCorreo('Cupón de Abrazos Gratis')">Canjear Cupón</button>
+        <button class="btn" onclick="enviarCorreo('Cupón Playero')">Canjear Cupón</button>
     </div>
 
     <div class="coupon">
-        <h2>Cupón de Cena Romantica 💐👩‍❤️‍👨</h2>
+        <h2>Cupón de Cena Romántica 💐👩‍❤️‍👨</h2>
         <ul>
-            <li>Incluye cena en un restaurante bonito </li>
-            <li>Conversación bonita de lo que queremos lograr juntos.</li>
+            <li>Incluye cena en un restaurante bonito</li>
+            <li>Conversación bonita de lo que queremos lograr juntos</li>
             <li>Tomar alguna bebida en celebración de nuestro amor</li>
             <li>Comer un postre para endulzar nuestra noche juntos</li>
-            <li>Una foto juntos para recordar este momento tan único</li>
+            <li>Una foto juntos para recordar este momento único</li>
             <li>Válido a partir de las 7:00 pm</li>
         </ul>
         <button class="btn" onclick="enviarCorreo('Cupón de Cena Romántica')">Canjear Cupón</button>
@@ -96,12 +110,13 @@
             // Abrir el cliente de correo
             window.location.href = mailtoLink;
 
-            // Redirigir a la página principal después de unos segundos
+            // Redirigir a la página principal después de 2 segundos
             setTimeout(() => {
-                window.location.href = 'codigo.html'; // Cambia esto si el archivo principal tiene otro nombre
-            }, 1000);
+                window.location.href = 'index.html'; // Asegura que sea la página principal correcta
+            }, 2000);
         }
     </script>
 
 </body>
 </html>
+
