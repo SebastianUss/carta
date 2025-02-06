@@ -55,11 +55,6 @@
 </head>
 <body>
 
-  <audio id="background-music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/02/14/audio_1a2b3c4d5e6f7g8h9i0j.mp3" type="audio/mp3">
-    Tu navegador no soporta el audio.
-  </audio>
-
   <div class="gif">
     <img src="gif.gif" alt="gif">
   </div>
@@ -78,10 +73,6 @@
     Cupones 🎁
   </a>
 
-  <a class="btn" href="#" onclick="playMusic()">
-    Activar Música 🎶
-  </a>
-
   <script>
     function downloadFile(filePath, fileName) {
       const link = document.createElement('a');
@@ -91,24 +82,7 @@
       link.click();
       document.body.removeChild(link);
     }
-
-    function playMusic() {
-      const music = document.getElementById('background-music');
-      music.play();
-    }
-
-    // Intentar reproducir automáticamente (puede fallar en algunos navegadores)
-    document.addEventListener('DOMContentLoaded', () => {
-      const music = document.getElementById('background-music');
-      music.volume = 0.5; // Ajusta el volumen
-      music.play().catch(() => {
-        console.log("El autoplay fue bloqueado, activa la música manualmente.");
-      });
-    });
   </script>
 
 </body>
 </html>
-
-
-
