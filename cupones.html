@@ -70,6 +70,51 @@
         .btn:hover {
             background-color: #e1baba;
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .heart {
+            font-size: 50px;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +146,16 @@
         <button class="btn" onclick="enviarCorreo('Cupón de Cena Romántica')">Canjear Cupón</button>
     </div>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>¡Cupón Canjeado! 🎉</h2>
+            <p>Gracias por canjear tu cupón. ¡Te deseamos un día lleno de amor!</p>
+            <div class="heart">❤️</div>
+        </div>
+    </div>
+
     <script>
         function enviarCorreo(cupon) {
             const email = 'sebasguti050802@gmail.com';  // Cambia esto por tu correo
@@ -113,8 +168,14 @@
 
             // Redirigir a cuponseleccionado.html
             setTimeout(function() {
-            window.location.href = "cuponseleccionado.html?cupon=" + encodeURIComponent(cupon);
+                // Mostrar la ventana modal después de un pequeño retraso
+                document.getElementById('myModal').style.display = 'block';
             }, 500);
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
         }
     </script>
 
