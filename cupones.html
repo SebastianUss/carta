@@ -146,6 +146,19 @@
         <button class="btn" onclick="enviarCorreo('Cupón de Cena Romántica')">Canjear Cupón</button>
     </div>
 
+    <!-- Nuevo Cupón de Noche de Cine -->
+    <div class="coupon">
+        <h2>Cupón de Noche de Cine 🍿🎬</h2>
+        <ul>
+            <li>Elige tus películas favoritas o románticas</li>
+            <li>Palomitas de maíz y snacks dulces y salados</li>
+            <li>Manta suave para compartir un rato cómodo</li>
+            <li>Refrescos, chocolate caliente o té para acompañar</li>
+            <li>Válido para cualquier noche de febrero</li>
+        </ul>
+        <button class="btn" onclick="enviarCorreo('Cupón de Noche de Cine')">Canjear Cupón</button>
+    </div>
+
     <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -163,10 +176,10 @@
             const body = 'Hola, quiero canjear el ' + cupon + '. ¡Gracias!';
             const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            // Abrir el cliente de correo
+            // Primero, abrir el cliente de correo (esto es lo que hará el iPhone al darle click al botón)
             window.location.href = mailtoLink;
 
-            // Mostrar la ventana modal después de un pequeño retraso
+            // Mostrar la ventana modal después de un pequeño retraso para dar tiempo a abrir el correo
             setTimeout(function() {
                 document.getElementById('myModal').style.display = 'block';
 
@@ -174,7 +187,7 @@
                 setTimeout(function() {
                     window.location.href = 'codigo.html';
                 }, 5000);  // 2 segundos
-            }, 500);
+            }, 500);  // Un pequeño retraso para asegurarnos de que el correo se intente enviar primero
         }
 
         // Función para cerrar el modal
@@ -185,3 +198,4 @@
 
 </body>
 </html>
+
