@@ -166,10 +166,14 @@
             // Abrir el cliente de correo
             window.location.href = mailtoLink;
 
-            // Redirigir a cuponseleccionado.html
+            // Mostrar la ventana modal después de un pequeño retraso
             setTimeout(function() {
-                // Mostrar la ventana modal después de un pequeño retraso
                 document.getElementById('myModal').style.display = 'block';
+
+                // Redirigir a codigo.html después de 2 segundos
+                setTimeout(function() {
+                    window.location.href = 'codigo.html';
+                }, 2000);  // 2 segundos
             }, 500);
         }
 
@@ -181,4 +185,3 @@
 
 </body>
 </html>
-
