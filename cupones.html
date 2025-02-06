@@ -110,6 +110,11 @@
 
             // Abrir el cliente de correo
             window.location.href = mailtoLink;
+
+            // Redirigir a cuponseleccionado.html
+            setTimeout(function() {
+            window.location.href = "cuponseleccionado.html?cupon=" + encodeURIComponent(cupon);
+            }, 500);
         }
     </script>
 
